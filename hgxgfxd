@@ -1,0 +1,24 @@
+ System.out.println(); 
+      System.out.println("Creating subscriber..."); 
+      s = new CDSBillingSubscriber(clientID, subName, 
+          selector, durable,transactional, jndiCtxFactory, 
+          connFactory, providerURL, topicName); 
+      System.out.println("Subscriber created."); 
+      System.out.println("clientID="+s.getClientID()); 
+      System.out.println("subName="+s.getSubName()); 
+      System.out.println("selector="+s.getSelector()); 
+      System.out.println("durable="+s.isDurable()); 
+      System.out.println("transactional="+s.isTransactional()); 
+      System.out.println("jndiCtxFactory="+s.getJndiCtxFactory()); 
+      System.out.println("connFactory="+s.getConnFactory()); 
+      System.out.println("providerURL="+s.getProviderURL()); 
+      System.out.println("topicName="+s.getTopicName()); 
+ 
+      System.out.println(); 
+      System.out.println("Running for ten minutes..."); 
+      Thread.sleep(600000); 
+      System.out.println("Ten minutes have elapsed."); 
+    } 
+    catch (Exception e) 
+    { 
+      e.printStackTrace(); 
